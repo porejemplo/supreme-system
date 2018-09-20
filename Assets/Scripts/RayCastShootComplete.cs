@@ -44,7 +44,6 @@ public class RayCastShootComplete : MonoBehaviour {
 			{
 				for (int i = hits.Length-1; i > -1; i--)
 				{
-					Debug.Log(hits[i].collider);
 					RaycastHit hit = hits[i];
 					ShootableBox sB = hit.collider.GetComponent<ShootableBox>();
 
@@ -68,7 +67,6 @@ public class RayCastShootComplete : MonoBehaviour {
 						else if ((colorUsar == "Amarillo" && dC.Color == "Rojo") || (colorUsar == "Rojo" && dC.Color == "Amarillo")){
 							colorUsar = "Naranja";
 						}
-						Debug.Log(colorUsar);
 						laserLine.SetPosition (1, hit.point);
 					}
 					else

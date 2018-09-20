@@ -22,7 +22,7 @@ public class ShootableBox : MonoBehaviour {
 
 	public void Damage(string s)
 	{
-		Debug.Log("Disparo " + s);
+		//Debug.Log("Disparo " + s);
 		if(!anim.isPlaying){
 			if (s == "Rojo")
 			{
