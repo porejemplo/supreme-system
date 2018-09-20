@@ -120,6 +120,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 120707752207783286, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
@@ -185,6 +190,71 @@ Prefab:
     - target: {fileID: 120707752207783286, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[3].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[3].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[4].g
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[4].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[5].g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[5].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[6].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[6].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[3].r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[2].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[4].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[5].r
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813908126518412, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: listaDeColores.Array.data[5].b
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -307,11 +377,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c8a962c579cbb408161f97890e4d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 3
-  Color: 
   Rojo: 2
   Azul: 2
+  Amarillo: 0
   Verde: 2
+  Naranja: 0
+  Morado: 0
   anim: {fileID: 1112473956}
 --- !u!65 &1112473958
 BoxCollider:
@@ -478,7 +549,6 @@ GameObject:
   - component: {fileID: 2012457659}
   - component: {fileID: 2012457658}
   - component: {fileID: 2012457657}
-  - component: {fileID: 2012457656}
   - component: {fileID: 2012457655}
   m_Layer: 0
   m_Name: Cube (1)
@@ -487,21 +557,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!111 &2012457655
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2012457654}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &2012457656
+--- !u!114 &2012457655
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -509,15 +565,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2012457654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c8a962c579cbb408161f97890e4d73, type: 3}
+  m_Script: {fileID: 11500000, guid: 710bc51b4cd784b44acc4c4dfb5678bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 3
-  Color: 
-  Rojo: 0
-  Azul: 0
-  Verde: 0
-  anim: {fileID: 0}
+  Color: Amarillo
 --- !u!65 &2012457657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -545,7 +596,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d8bc2da3fbeacaf45939c913343e355a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -579,7 +630,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2012457654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.98, y: 0.892, z: 0.62}
+  m_LocalPosition: {x: -0.42, y: 1.5, z: -2.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
