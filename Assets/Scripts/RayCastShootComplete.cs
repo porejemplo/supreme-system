@@ -81,7 +81,7 @@ public class RayCastShootComplete : MonoBehaviour {
 			}
 		}
 		else if(Input.GetButtonDown("Fire2")){
-			ColorActivo = (ColorActivo + 1)%listaDeColores.Length;
+			ColorActivo = (ColorActivo + 1)%3;
 		}
 	}
 
