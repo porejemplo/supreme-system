@@ -31,9 +31,6 @@ public class RayCastShootComplete : MonoBehaviour {
             // Create a vector at the center of our camera's viewport
             Vector3 rayOrigin = fpsCam.ViewportToWorldPoint (new Vector3(0.5f, 0.5f, 0.0f));
 
-            // Declare a raycast hit to store information about what our raycast has hit
-            //RaycastHit hit;
-
 			// Set the start position for our visual effect for our laser to the position of gunEnd
 			laserLine.SetPosition (0, gunEnd.position);
 
@@ -42,13 +39,29 @@ public class RayCastShootComplete : MonoBehaviour {
 
 			if(hits.Length > 0)
 			{
-				for (int i = hits.Length-1; i > -1; i--)
+				//ordenar el array
+				RaycastHit temp;
+				for (int write = 0; write < hits.Length; write++)
+				{
+					for (int sort = 0; sort < hits.Length - 1; sort++)
+					{
+						if (hits[sort].distance > hits[sort + 1].distance)
+						{
+							temp = hits[sort + 1];
+							hits[sort + 1] = hits[sort];
+							hits[sort] = temp;
+						}       
+					} 
+				}
+
+				 for (int i = 0; i < hits.Length; i++)
 				{
 					RaycastHit hit = hits[i];
 					ShootableBox sB = hit.collider.GetComponent<ShootableBox>();
 
 					if (sB)
 					{
+						Debug.Log(colorUsar);
 						laserLine.SetPosition (1, hit.point);
 
 						sB.Damage (colorUsar);
@@ -60,6 +73,7 @@ public class RayCastShootComplete : MonoBehaviour {
 					{
 						if ((colorUsar == "Amarillo" && dC.Color == "Azul") || (colorUsar == "Azul" && dC.Color == "Amarillo")){
 							colorUsar = "Verde";
+							Debug.Log(colorUsar);
 						}
 						else if ((colorUsar == "Rojo" && dC.Color == "Azul") || (colorUsar == "Azul" && dC.Color == "Rojo")){
 							colorUsar = "Morado";
